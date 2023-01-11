@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@use '@angular/material' as mat;
+ @use '@angular/material' as mat;
+ @use '@angular/cdk';
 
-// TODO: #12. Enable HighContrast mode
 
 :host {
   display: flex;
@@ -60,17 +60,6 @@
 
     .fillings {
       flex-grow: 1;
-
-      // TODO: #7. Create selectable controls with Angular Material
-      ul { 
-        list-style: none;
-        margin: 5px 20px;
-        padding: 0;
-      }
-      
-      li {
-        margin: 10px 0;
-      }
     }
 
     .quantity {
@@ -89,7 +78,10 @@
     border-radius: 5px;
     background-color: mat.get-color-from-palette(mat.$pink-palette, A100);
 
-    // TODO: #12. Enable HighContrast mode
+    @include cdk.high-contrast() {
+      outline: solid 1px;
+      background-color: mat.get-color-from-palette(mat.$pink-palette, 50);
+    }
 
     text-align: center;
     text-transform: uppercase;
@@ -109,6 +101,9 @@
   .purchase-button {
     background-color: mat.get-color-from-palette(mat.$light-green-palette, A100);
 
-    // TODO: #12. Enable HighContrast mode
+    @include cdk.high-contrast() {
+      outline: solid 1px;
+      background-color: mat.get-color-from-palette(mat.$light-green-palette, 50);
+    }
   }
 }

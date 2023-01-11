@@ -14,8 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <div mat-dialog-content>
-  <!-- TODO: #10. Control focus with FocusTrap -->
-  <mat-selection-list #colors aria-label="Dumpling wrapper color" multiple="false">
+  <mat-selection-list #colors aria-label="Dumpling wrapper color" multiple="false" cdkFocusInitial>
     <mat-list-option *ngFor="let paint of defaultColors" [value]="paint" color="primary">
       <div class="color-option">
         <div class="circle" [ngStyle]="{'background': paint}"></div>

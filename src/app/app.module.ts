@@ -38,7 +38,7 @@ import { LocationComponent } from './location/location.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ShopComponent } from './shop/shop.component';
 
-// TODO: #9. Add the power of @angular/cdk/a11y
+import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -64,6 +64,7 @@ import { ShopComponent } from './shop/shop.component';
     MatSliderModule,
     MatToolbarModule,
     GoogleMapsModule,
+    A11yModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
